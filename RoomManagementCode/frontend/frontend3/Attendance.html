@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="Style1.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <div class="contact-form">
+      <h2>ATTENDANCE RECORDS</h2>    
+       <br>
+      <input id="DownloadBtn" value="Download Report" type="button">
+      <script>
+            function download(filename, textInput) {
+
+                  var element = document.createElement('a');
+              <--! set downloaded file parameters-->
+                  element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(textInput));
+                  element.setAttribute('download', filename);
+                  document.body.appendChild(element);
+                  element.click();
+                  //document.body.removeChild(element);
+            }
+            document.getElementById("DownloadBtn")
+                  .addEventListener("click", function () {
+                        var text = Report contents
+                        var filename = "SampleReport.txt";
+                        download(filename, text);
+              
+              <--!to download report ,use the backend to generate report in a file and put its contents in the text variable -->
+                  }, false);
+      </script>
+      
+      
+      
+      <p style="text-align: center;"> Note that today's report is only available
+        for download between 11 pm to 12 noon </p>
+      
+      <br>
+      <input name="d1" type="date"> <br>
+      <div class="tooltip"> <input name="View past" value="Check Past Records"
+
+type="button"> <span class="tooltiptext">View the report of the entered date</span>
+      </div>
+    </div>
+    <script>
+
+  </script>
+  </body>
+</html>
